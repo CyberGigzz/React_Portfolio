@@ -4,6 +4,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Logo from '../assets/logo2.png';
 import { Link } from 'react-scroll';
+import resumePDF from '../assets/webDevResume.pdf';  // Import your PDF file
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -122,7 +123,8 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href={resumePDF} // Replace this with the actual path to your PDF file
+              download="webDevResume.pdf" 
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
